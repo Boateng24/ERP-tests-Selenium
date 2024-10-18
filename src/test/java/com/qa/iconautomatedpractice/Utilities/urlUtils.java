@@ -23,4 +23,12 @@ public class urlUtils {
         String currentURL = driver.getCurrentUrl();
         Assert.assertEquals(currentURL, expectedURL);
     }
+
+    public void assertUrlDoesNotContain(String route) {
+        String baseUrl = "https://icon.amalitech-dev.net";
+        String expectedURL = baseUrl + route;
+
+        String currentURL = driver.getCurrentUrl();
+        Assert.assertNotEquals(currentURL, expectedURL, "Unexpected URL: " + currentURL);
+    }
 }
