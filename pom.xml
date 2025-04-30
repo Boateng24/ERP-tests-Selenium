@@ -153,6 +153,15 @@
 
     <build>
         <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version> <!-- Or a compatible version -->
+            <configuration>
+                <source>21</source> <!-- Or use 17 or 8 depending on your Java version -->
+                <target>21</target> <!-- Or use 17 or 8 depending on your Java version -->
+            </configuration>
+        </plugin>
             <!-- Surefire Plugin for running tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
